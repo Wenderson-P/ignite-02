@@ -1,6 +1,12 @@
 import { MovieCard } from './MovieCard';
+import { MovieProps,GenreResponseProps } from '../@types/apiProps';
 
-export function Content({movies,selectedGenre}) {
+interface ContentProps {
+  movies: MovieProps[];
+  selectedGenre:GenreResponseProps
+}
+
+export function Content({movies,selectedGenre} : ContentProps) {
   return (
     <div className="container">
     <header>

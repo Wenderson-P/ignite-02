@@ -1,6 +1,13 @@
 import { Button } from "./Button"
+import { GenreResponseProps } from '../@types/apiProps';
 
-export function SideBar({genres,selectedGenreId,handleClickButton}) {
+interface SideBarProps {
+  genres:GenreResponseProps[];
+  selectedGenreId:number;
+  handleClickButton:(id:number)=>void 
+}
+
+export function SideBar({genres,selectedGenreId,handleClickButton}:SideBarProps) {
 
   return (
     <nav className="sidebar">
